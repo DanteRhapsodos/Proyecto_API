@@ -1,5 +1,7 @@
-# Etapa 1: Construcción del proyecto
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# Etapa 1: Maven con Java 21
+FROM eclipse-temurin:21-jdk as build
+
+RUN apt-get update && apt-get install -y maven
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
@@ -31,4 +33,3 @@ COPY --from=build /app/target/quarkus-app/quarkus/ /deployments/quarkus/
 EXPOSE 8080
 USER 1001
 ENTRYPOINT ["/deployments/run-java.sh"]
-
