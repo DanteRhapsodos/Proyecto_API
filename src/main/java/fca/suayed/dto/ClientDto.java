@@ -41,7 +41,7 @@ public class ClientDto {
     }
 
     public void setSecond_last_name(String second_last_name) {
-        this.last_name = last_name;
+        this.second_last_name = second_last_name;
     }
 
     @ColumnName("RFC")
