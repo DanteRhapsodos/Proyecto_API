@@ -7,7 +7,7 @@ public class ClientDto {
     private String name;
     private String last_name;
     private String second_last_name;
-    private String client_rfc;
+    private String rfc;
 
     public Long getId() {
         return id;
@@ -46,11 +46,11 @@ public class ClientDto {
 
     @ColumnName("rfc")
     public String getRfc() {
-        return cliente_rfc;
+        return rfc;
     }
 
     public void setRFC(String client_rfc) {
-        this.client_rfc = client_rfc;
+        this.rfc = rfc;
     }
 
 }
