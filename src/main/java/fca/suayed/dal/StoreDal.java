@@ -29,6 +29,26 @@ public class StoreDal {
         responseDto.setData(products);
         return responseDto;
     }
+    
+    public ResponseDto<List<ClientDto>> getClients() {
+
+        ResponseDto responseDto = new ResponseDto<List<ClientDto>>();
+        responseDto.setSuccess(true);
+        Jdbi jdbi = jdbiService.getInstance();
+        var clients = jdbi.withExtension(StoreDao.class, dao -> dao.getClients());
+        responseDto.setData(clients);
+        return responseDto;
+    }
+
+    public ResponseDto<List<OrderDto>> getOrders() {
+
+        ResponseDto responseDto = new ResponseDto<List<OrderDto>>();
+        responseDto.setSuccess(true);
+        Jdbi jdbi = jdbiService.getInstance();
+        var orders = jdbi.withExtension(StoreDao.class, dao -> dao.getOrders());
+        responseDto.setData(products);
+        return responseDto;
+    }
 
     public ResponseDto<String> addProduct(final ProductDto productDto) {
 
@@ -44,5 +64,37 @@ public class StoreDal {
 
         return responseDto;
     }
+
+    public ResponseDto<String> addClient(final ClientDto clientDto) {
+
+        ResponseDto responseDto = new ResponseDto<String>();
+        responseDto.setSuccess(false);
+
+        Jdbi jdbi = jdbiService.getInstance();
+        jdbi.useExtension(StoreDao.class, dao -> {
+            dao.addClient(clientDto);
+            responseDto.setSuccess(true);
+            responseDto.setData("ok");
+        });
+
+        return responseDto;
+    }
+
+
+    public ResponseDto<String> addOrder(final OrderDto orderDto) {
+
+        ResponseDto responseDto = new ResponseDto<String>();
+        responseDto.setSuccess(false);
+
+        Jdbi jdbi = jdbiService.getInstance();
+        jdbi.useExtension(StoreDao.class, dao -> {
+            dao.addProduct(orderDto);
+            responseDto.setSuccess(true);
+            responseDto.setData("ok");
+        });
+
+        return responseDto;
+    }
+
 
 }
