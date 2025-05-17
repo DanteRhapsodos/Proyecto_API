@@ -48,7 +48,7 @@ public class StoreDal {
         responseDto.setSuccess(true);
         Jdbi jdbi = jdbiService.getInstance();
         var orders = jdbi.withExtension(StoreDao.class, dao -> dao.getOrders());
-        responseDto.setData(products);
+        responseDto.setData(orders);
         return responseDto;
     }
 
