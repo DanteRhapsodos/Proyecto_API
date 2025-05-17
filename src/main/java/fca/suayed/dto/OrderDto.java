@@ -35,7 +35,7 @@ public class OrderDto {
     }
 
     @ColumnName("cantidad")
-    public Double getQuantity() {
+    public Integer getQuantity() {
         return this.Quantity;
     }
 
