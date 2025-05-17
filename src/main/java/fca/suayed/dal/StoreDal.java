@@ -90,7 +90,7 @@ public class StoreDal {
 
         Jdbi jdbi = jdbiService.getInstance();
         jdbi.useExtension(StoreDao.class, dao -> {
-            dao.addProduct(orderDto);
+            dao.addOrder(orderDto);
             responseDto.setSuccess(true);
             responseDto.setData("ok");
         });
