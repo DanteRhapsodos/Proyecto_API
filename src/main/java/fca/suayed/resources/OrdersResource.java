@@ -23,7 +23,7 @@ public class OrdersResource {
     @GET
     @Path("/all")
     @Produces(MediaType.APPLICATION_JSON)
-    @Operation(summary = "Get all order")
+    @Operation(summary = "Get all orders")
     @APIResponses(value = {
             @APIResponse(responseCode = "200", content = @Content(mediaType = MediaType.APPLICATION_JSON)),
     })
