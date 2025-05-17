@@ -36,7 +36,7 @@ public class OrderDto {
 
     @ColumnName("cantidad")
     public Integer getQuantity() {
-        return this.Quantity;
+        return quantity;
     }
 
     public void setQuantity(Integer quantity) {
