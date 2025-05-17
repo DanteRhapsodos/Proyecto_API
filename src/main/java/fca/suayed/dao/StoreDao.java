@@ -28,7 +28,7 @@ public interface StoreDao {
     @SqlUpdate("INSERT INTO productos (nombre, descripcion, precio, cantidad, sku) VALUES(:p.name, :p.description, :p.price, :p.quantity, :p.sku)")
     void addProduct(@BindBean("p") ProductDto productDto);
 
-    @SqlUpdate("INSERT INTO clientes (nombre, apellido_paterno, apellido_materno, rfc) VALUES(:c.name, :c.last_name, :c.second_last_name, :c.RFC)")
+    @SqlUpdate("INSERT INTO clientes (nombre, apellido_paterno, apellido_materno, rfc) VALUES(:c.name, :c.last_name, :c.second_last_name, :c.rfc)")
     void addClient(@BindBean("c") ClientDto clientDto);
 
     @SqlUpdate("INSERT INTO ordenes (cliente_id, producto_id, cantidad) VALUES(:o.client_id, :o.product_id, :o.quantity)")
