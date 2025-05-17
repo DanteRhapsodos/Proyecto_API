@@ -3,6 +3,8 @@ package fca.suayed.resources;
 
 import fca.suayed.dal.StoreDal;
 import fca.suayed.dto.ProductDto;
+import fca.suayed.dto.ClientDto;
+import fca.suayed.dto.OrderDto;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
