@@ -2,6 +2,8 @@ package fca.suayed.dal;
 
 import fca.suayed.dao.StoreDao;
 import fca.suayed.dto.ProductDto;
+import fca.suayed.dto.ClientDto;
+import fca.suayed.dto.OrderDto;
 import fca.suayed.dto.ResponseDto;
 import fca.suayed.services.JdbiService;
 import jakarta.enterprise.context.ApplicationScoped;
