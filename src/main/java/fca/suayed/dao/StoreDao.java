@@ -2,6 +2,8 @@ package fca.suayed.dao;
 
 
 import fca.suayed.dto.ProductDto;
+import fca.suayed.dto.ClientDto;
+import fca.suayed.dto.OrderDto;
 import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
 import org.jdbi.v3.sqlobject.customizer.BindBean;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
