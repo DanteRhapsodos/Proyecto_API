@@ -44,7 +44,7 @@ public class ClientDto {
         this.second_last_name = second_last_name;
     }
 
-    @ColumnName("RFC")
+    @ColumnName("rfc")
     public String getRFC() {
         return RFC;
     }
