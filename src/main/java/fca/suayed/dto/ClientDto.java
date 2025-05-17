@@ -49,7 +49,7 @@ public class ClientDto {
         return rfc;
     }
 
-    public void setRFC(String client_rfc) {
+    public void setRFC(String rfc) {
         this.rfc = rfc;
     }
 
