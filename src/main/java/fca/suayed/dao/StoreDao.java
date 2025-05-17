@@ -19,7 +19,7 @@ public interface StoreDao {
 
     @RegisterBeanMapper(ClientDto.class)
     @SqlQuery("SELECT * FROM clientes")
-    List<ClientDto> getClient();
+    List<ClientDto> getClients();
 
     @RegisterBeanMapper(OrderDto.class)
     @SqlQuery("SELECT * FROM ordenes")
