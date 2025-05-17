@@ -45,7 +45,7 @@ public class ClientDto {
     }
 
     @ColumnName("RFC")
-    public Integer getRFC() {
+    public String getRFC() {
         return RFC;
     }
 
